@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;0,6..96,900;1,6..96,400;1,6..96,600&family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Barlow:wght@300;400&display=swap');
+@import 'tailwindcss';
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #2a2520;
+  font-family: 'Barlow Condensed', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+@media print {
+  @page {
+    size: A3 landscape;
+    margin: 0;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  .print-hide,
+  .mobile-view {
+    display: none !important;
+  }
+
+  .desktop-view {
+    display: block !important;
+  }
+
+  .print-container {
+    padding: 0 !important;
+    background: transparent !important;
+    display: block !important;
+  }
+
+  .print-page-wrapper {
+    max-width: none !important;
+    width: 100% !important;
+    page-break-after: always;
+    page-break-inside: avoid;
+    margin: 0 !important;
+  }
+
+  .print-shadow-none {
+    box-shadow: none !important;
+  }
+}
